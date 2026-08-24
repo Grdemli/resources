@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ათასწლეულის სკოლა | მე-5 კლასის რესურსები</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header>
+	<a href="index.html">
+        <img src="logo.png" alt="ათასწლეულის სკოლა" class="logo-placeholder" onerror="this.style.display='none'">
+	</a>
+        <p class="subtitle">2026-2027 სასწავლო წლის მე-5 კლასის სახელმძღვანელოები და რესურსები</p>
+    </header>
+
+    <!-- STICKY PROGRESS BAR -->
+    <div class="progress-bar-container">
+        <span class="progress-text" id="progress-text">0 / 0 (0%)</span>
+        <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <button class="reset-btn" onclick="resetChecklist()">გასუფთავება</button>
+    </div>
+
+    <!-- SECTION 1: TEXTBOOKS -->
+    <div class="section-title collapsible" onclick="toggleSection(this)">
+	I. სახელმძღვანელოები
+	<span class="toggle-icon">▼</span>
+	</div>
+	<div class="section-content">
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="check-col">✓</th>
+                    <th>საგანი</th>
+                    <th>სახელმძღვანელო</th>
+                    <th>სხვა</th>
+                    <th>კომენტარი</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-id="book-georgian">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>ქართული ენა და ლიტერატურა</strong></td>
+                    <td>• ქართული 5, ქართული ლიტერატურა (ორივე ნაწილი); ავტ: ნ. გორდელაძე, თ. კუხიანიძე, ბაკურ სულაკაურის გამომცემლობა</td>
+                    <td>ქართულის ორი 48-ფურცლიანი რვეული, კალამი, ფანქარი<br>• ათასწლეულის კრებული "ქართული ენა და ლიტერატურა"</td>
+                    <td>
+                        კრებულის ღირებულებაა 41 ლარი. გადარიცხვა სკოლის ანგარიშზე.
+                        <div class="bank-box">
+                            შპს „ათასწლეულის სკოლა"<br>
+                            ს/ნ: 204528699<br>
+                            სს საქართველოს ბანკი | BAGAGE22<br>
+                            IBAN: GE94BG0000000195939700<br>
+                            <strong>დანიშნულება:</strong> ქართულის სახელმძღვანელოს ღირებულება - [მოსწავლის სახელი და გვარი]
+                        </div>
+                    </td>
+                </tr>
+                <tr data-id="book-math">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>მათემატიკა</strong></td>
+                    <td>• მათემატიკა 5: მოსწავლის წიგნი (ნაწილი 1, 2, 3). ავტ: გურამ გოგიშვილი, თეიმურაზ ვეფხვაძე, ია მებონია, ლამარა ქურჩიშვილი. გამომცემლობა „ინტელექტი“</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr data-id="book-english">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>ინგლისური</strong></td>
+                    <td>
+                        • Global stage 4 literacy book & language book with Navio app<br>
+                        • Global stage 4 workbook<br>
+                        • Wonderful world (2nd edition) 3 grammar book
+                    </td>
+                    <td>-</td>
+                    <td>სახელმძღვანელოები გაიყიდება სკოლაში სწავლის დაწყებიდან პირველ კვირას. კომპლექტის საფასური: 238 ლარი. (ნაღდი/ბარათი).</td>
+                </tr>
+                <tr data-id="book-german">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>გერმანული</strong></td>
+                    <td>• Deutschprofis A1 (1-10 Lektionen), ავტ: Olga Swerlowa</td>
+                    <td>რვეული საშინაო და საკლასო დავალებებისთვის</td>
+                    <td>წინასწარ შეძენა არ არის საჭირო - მასწავლებელი თავად მიაწვდის ელ-ვერსიას. <a href="https://drive.google.com/drive/folders/1BFEi4kzokVIJWCLpGQAnfwqhiyGAsN59?usp=sharing" target="_blank">ელ-მასალის ბმული</a></td>
+                </tr>
+                <tr data-id="book-french">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>ფრანგული</strong></td>
+                    <td>• გამომცემლობა CLE International, ავტ: Claire Mique და Colette Samson</td>
+                    <td>რვეული საშინაო და საკლასო დავალებებისთვის</td>
+                    <td>წინასწარ შეძენა არ არის საჭირო - მასწავლებელი მიაწვდის ელ-ვერსიებს.</td>
+                </tr>
+                <tr data-id="book-chinese">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>ჩინური</strong></td>
+                    <td>• Yct 2, ავტ: Su Yingxia</td>
+                    <td>რვეული საშინაო და საკლასო დავალებებისთვის, საქაღალდე პორტფოლიოსთვის</td>
+                    <td>წინასწარ შეძენა არ არის საჭირო - მასწავლებელი მიაწვდის ელ-ვერსიებს.</td>
+                </tr>
+                <tr data-id="book-georgia">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>ჩვენი საქართველო</strong></td>
+                    <td>• "ჩვენი საქართველო" ორივე ნაწილი და მოსწავლის რვეული. ავტ: როლანდ თოფჩიშვილი, გამომცემლობა „კლიო“</td>
+                    <td>რვეული საშინაო დავალებებისთვის</td>
+                    <td>-</td>
+                </tr>
+                <tr data-id="book-nature">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>ბუნებისმეტყველება</strong></td>
+                    <td>• ბუნება (I და II ნაწილები). ავტ: მ. ბლიაძე, რ. ახვლედიანი, გამომცემლობა „სულაკაური“</td>
+                    <td>მოსწავლის რვეული + უჯრიანი რვეული</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+	</div>
+
+    <!-- SECTION 2: RESOURCES -->
+    <div class="section-title collapsible" onclick="toggleSection(this)">
+    II. სასკოლო რესურსების ჩამონათვალი
+    <span class="toggle-icon">▼</span>
+	</div>
+	<div class="section-content">
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="check-col">✓</th>
+                    <th>რესურსების ჩამონათვალი</th>
+                    <th>რაოდენობა</th>
+                    <th>საგანი / დანიშნულება</th>
+                    <th>დამატებითი კომენტარი</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-id="res-colored-pencils"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფერადი ფანქარი</td><td>1 შეკვრა</td><td>ყველა</td><td>18 ფერიანი ან მეტი</td></tr>
+                <tr data-id="res-markers"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფერადი ფლომასტერი</td><td>1 შეკვრა</td><td>ყველა</td><td>18 ფერიანი ან მეტი (სასურველია Milan)</td></tr>
+                <tr data-id="res-pencils"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">უბრალო ფანქარი</td><td>4 ცალი</td><td>ყველა</td><td>-</td></tr>
+                <tr data-id="res-eraser"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">საშლელი</td><td>2 ცალი</td><td>ყველა</td><td>სასურველია Milan</td></tr>
+                <tr data-id="res-sharpener"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">სათლელი</td><td>2 ცალი</td><td>ყველა</td><td>სასურველია Milan</td></tr>
+                <tr data-id="res-ruler"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">სახაზავი</td><td>1 ცალი</td><td>ყველა</td><td>30 სმ-იანი, მყარი</td></tr>
+                <tr data-id="res-scissors"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">მაკრატელი</td><td>1 ცალი</td><td>ყველა</td><td>საბავშვო (მემარცხენეებისთვის შესაბამისი)</td></tr>
+                <tr data-id="res-playdough"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">პლასტელინი</td><td>2 შეკვრა</td><td>ყველა</td><td>24 ფერიანი</td></tr>
+                <tr data-id="res-glue"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">მშრალი წებო</td><td>2 ცალი</td><td>ყველა</td><td>-</td></tr>
+                <tr data-id="res-pens"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">კალამი</td><td>3 ცალი</td><td>ყველა</td><td>ლურჯი</td></tr>
+                <tr data-id="res-col-pens"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფერადი კალამი</td><td>1 კომპლექტი</td><td>ყველა</td><td>3-4 ფერი (ერთ-ერთი მწვანე)</td></tr>
+                <tr data-id="res-col-paper"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფერადი ფურცლები</td><td>1 შეკვრა</td><td>ყველა</td><td>-</td></tr>
+                <tr data-id="res-pencil-case"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">პენალი</td><td>1 ცალი</td><td>ყველა</td><td>საწერი/სახატავი საშუალებებისთვის</td></tr>
+                <tr data-id="res-drawing-pad"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">სახატავი რვეული</td><td>1 ცალი</td><td>ხელოვნება</td><td>-</td></tr>
+                <tr data-id="res-grid-notebook"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">უჯრებიანი რვეული</td><td>6 ცალი</td><td>მათემატიკა, ინგლისური, საზ. მეცნიერება</td><td>-</td></tr>
+                <tr data-id="res-line-notebook"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ცალხაზიანი რვეული</td><td>3 ცალი</td><td>ქართული</td><td>-</td></tr>
+                <tr data-id="res-folders"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">საქაღალდე</td><td>6 ცალი</td><td>ორგანიზებისთვის</td><td>სხვადასხვა ფერის, "წკაპით"</td></tr>
+                <tr data-id="res-pastels"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფერადი პასტელები (ზეთოვანი)</td><td>1 შეკვრა</td><td>ხელოვნება</td><td>18 ფერიანი</td></tr>
+                <tr data-id="res-watercolor"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">აკვარელი</td><td>1 ნაკრები</td><td>ხელოვნება</td><td>18 ფერიანი ან მეტი</td></tr>
+                <tr data-id="res-brushes"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფუნჯების ნაკრები</td><td>1 ნაკრები</td><td>ხელოვნება</td><td>5 სხვადასხვა ზომის ფუნჯი</td></tr>
+                <tr data-id="res-gouache"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">სახატავი საღებავები (გუაში)</td><td>1 ნაკრები</td><td>ხელოვნება</td><td>18 ფერიანი ან მეტი</td></tr>
+                <tr data-id="res-water-cup"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">წყლის კონტეინერი/ჭიქა</td><td>1 ცალი</td><td>ხელოვნება</td><td>ფუნჯების გასარეცხად</td></tr>
+                <tr data-id="res-clay"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">თიხა</td><td>3 შეკვრა</td><td>ხელოვნება</td><td>პატარა ზომის, თეთრი ფერის</td></tr>
+                <tr data-id="res-canvas"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ტილო</td><td>3 ცალი</td><td>ხელოვნება</td><td>30x40 (ან ნებისმიერი ზომა)</td></tr>
+            </tbody>
+        </table>
+    </div>
+	</div>
+
+    <!-- SECTION 3: ADDITIONAL ITEMS -->
+    <div class="section-title collapsible" onclick="toggleSection(this)">
+    III. დამატებითი საჭირო ნივთები
+    <span class="toggle-icon">▼</span>
+	</div>
+	<div class="section-content">
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="check-col">✓</th>
+                    <th>ნივთის დასახელება</th>
+                    <th>რაოდენობა</th>
+                    <th>დამატებითი კომენტარი</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-id="add-wipes">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>სველი ხელსახოცი</strong></td>
+                    <td>3 შეკვრა (დიდი ზომის)</td>
+                    <td>სასურველია ანტიბაქტერიული</td>
+                </tr>
+                <tr data-id="add-bottle">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>წყლის ბოთლი</strong></td>
+                    <td>1 ცალი</td>
+                    <td>0,7 ლიტრის მოცულობის</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+	</div>
+
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:1000; justify-content:center; align-items:center; cursor:pointer;">
+    <img id="lightbox-img" style="max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</div>
+</body>
+</html>

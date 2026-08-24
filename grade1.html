@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ათასწლეულის სკოლა | მე-1 კლასის რესურსები</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header>
+	<a href="index.html">
+        <img src="logo.png" alt="ათასწლეულის სკოლა" class="logo-placeholder" onerror="this.style.display='none'">
+	</a>
+        <p class="subtitle">2026-2027 სასწავლო წლის მე-1 კლასის რესურსები</p>
+    </header>
+
+    <!-- STICKY PROGRESS BAR -->
+    <div class="progress-bar-container">
+        <span class="progress-text" id="progress-text">0 / 0 (0%)</span>
+        <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <button class="reset-btn" onclick="resetChecklist()">გასუფთავება</button>
+    </div>
+
+    <!-- SECTION 1: TEXTBOOKS -->
+    <div class="section-title collapsible" onclick="toggleSection(this)">
+	I. სახელმძღვანელოები
+	<span class="toggle-icon">▼</span>
+	</div>
+	<div class="section-content">
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th>პირველ კლასში ყველა სახელმძღვანელოს შესყიდვას უზრუნველყოფს სკოლა.</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+	</div>
+
+    <!-- SECTION 2: RESOURCES -->
+    <div class="section-title collapsible" onclick="toggleSection(this)">
+    II. სასკოლო რესურსების ჩამონათვალი
+    <span class="toggle-icon">▼</span>
+	</div>
+	<div class="section-content">
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="check-col">✓</th>
+                    <th>რესურსების ჩამონათვალი</th>
+                    <th>რაოდენობა</th>
+                    <th>საგანი / დანიშნულება</th>
+                    <th>დამატებითი კომენტარი</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-id="res-g1-colored-pencils"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფერადი ფანქარი</td><td>2 შეკვრა</td><td>ყველა</td><td>სასურველია lyra-ს ფირმის</td></tr>
+                <tr data-id="res-g1-markers"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფერადი ფლომასტერი</td><td>2 შეკვრა</td><td>ყველა</td><td>სასურველია milan-ის ფირმის</td></tr>
+                <tr data-id="res-g1-eraser"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">საშლელი</td><td>3 ცალი</td><td>ყველა</td><td>სასურველია milan-ის ფირმის</td></tr>
+                <tr data-id="res-g1-sharpener"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">სათლელი</td><td>2 ცალი</td><td>ყველა</td><td>სასურველია milan-ის ფირმის</td></tr>
+                <tr data-id="res-g1-ruler"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">სახაზავი</td><td>1 ცალი</td><td>ყველა</td><td>-</td></tr>
+                <tr data-id="res-g1-scissors"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">მაკრატელი</td><td>1 ცალი</td><td>ყველა</td><td>საბავშვო (მემარცხენეებისთვის შეგიძლიათ მაღაზიაში მოიკითხოთ მათთვის განკუთვნილი შესაბამისი მაკრატელი)</td></tr>
+                <tr data-id="res-g1-playdough"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">პლასტელინი</td><td>2 შეკვრა</td><td>ყველა</td><td>-</td></tr>
+                <tr data-id="res-g1-glue"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">მშრალი წებო</td><td>1 შეკვრა</td><td>ყველა</td><td>6-8 ცალი</td></tr>
+                <tr data-id="res-g1-pens"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">კალამი</td><td>3 ცალი</td><td>მათემატიკა/ყველა</td><td>ლურჯი</td></tr>
+                <tr data-id="res-g1-math-notebook-48"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">მათემატიკის რვეული (48ც)</td><td>2 ცალი</td><td>მათემატიკა</td><td>-</td></tr>
+                <tr data-id="res-g1-dry-playdough"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">მშრალი პლასტელინი</td><td>1 შეკვრა</td><td>ყველა</td></tr>
+                <tr data-id="res-g1-counting-sticks"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">სათვლელი ჩხირები</td><td>1 ცალი</td><td>მათემატიკა</td></tr>
+                <tr data-id="res-g1-triangular-pencil"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">2B სიმუქის სამწახნაგა ფანქარი</td><td>2 ცალი</td><td>ყველა</td></tr>
+                <tr data-id="res-g1-colored-pens"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფერადი კალამი</td><td>1 კომპლექტი</td><td>ყველა</td><td>3-4 ფერი</td></tr>
+                <tr data-id="res-g1-col-paper"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფერადი ფურცლები</td><td>1 შეკვრა</td><td>ყველა</td><td>-</td></tr>
+                <tr data-id="res-g1-pencil-case"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">პენალი</td><td>1 ცალი</td><td>ყველა</td><td>საწერი/სახატავი საშუალებების ჩასალაგებლად</td></tr>
+                <tr data-id="res-g1-drawing-pad"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">სახატავი რვეული</td><td>3 ცალი</td><td>ხელოვნება</td><td>-</td></tr>
+                <tr data-id="res-g1-grid-notebook"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">უჯრებიანი რვეული</td><td>4 ცალი</td><td>2 მათემატიკა, 2 ინგლისური</td><td>48 ფურცლიანი, მინდორიანი</td></tr>
+                <tr data-id="res-g1-lined-notebook"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ბადიანი რვეული</td><td>3 ცალი</td><td>ქართული</td><td>პირველი კლასის</td></tr>
+                <tr data-id="res-g1-big-notebook"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">დიდი ზომის რვეული/ბლოკნოტი</td><td>1 ცალი</td><td>ბუნებისმეტყველება</td><td>A4 ზომის, 48 ფურცლიანი</td></tr>
+                <tr data-id="res-g1-mag-board"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">მაგნიტებიანი დაფა (მაგნიტი - 10ც. მარკერებით და საშლელით)</td><td>1 ცალი</td><td>მათემატიკა, ქართული</td><td>A4 ზომის</td></tr>
+                <tr data-id="res-g1-storage-box"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">კონტეინერი</td><td>1 ცალი</td><td>დამატებითი რესურსების მობილიზებისთვის</td><td>15 ლ მოცულობის</td></tr>
+                <tr data-id="res-g1-folders"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">საქაღალდე</td><td>5 ცალი</td><td>სასწავლო მასალების ორგანიზებისთვის</td><td>სხვადასხვა ფერის, "წკაპით"</td></tr>
+                <tr data-id="res-g1-apron"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">წინსაფარი & სამკლაურები</td><td>1 ცალი</td><td>სახატავ მასალებთან მუშაობისთვის</td><td>-</td></tr>
+                <tr data-id="res-g1-oil-pastels"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფერადი პასტელები ზეთოვანი</td><td>1 შეკვრა</td><td>ხელოვნება</td><td>-</td></tr>
+                <tr data-id="res-g1-brushes"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">ფუნჯების ნაკრები</td><td>1 ნაკრები</td><td>ხელოვნება</td><td>5 სხვადასხვა ზომის ფუნჯით</td></tr>
+                <tr data-id="res-g1-gouache"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">სახატავი საღებავები (გუაში)</td><td>1 ნაკრები</td><td>ხელოვნება</td><td>-</td></tr>
+                <tr data-id="res-g1-water-cup"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">წყლის კონტეინერი/ჭიქა</td><td>1 ცალი</td><td>ხელოვნება</td><td>ფუნჯების გასარეცხად</td></tr>
+                <tr data-id="res-g1-clay"><td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td><td class="item-title">თიხა</td><td>2 შეკვრა</td><td>ხელოვნება</td><td>თეთრი</td></tr>
+            </tbody>
+        </table>
+    </div>
+	</div>
+
+    <!-- SECTION 3: ADDITIONAL ITEMS -->
+    <div class="section-title collapsible" onclick="toggleSection(this)">
+    III. დამატებითი საჭირო ნივთები
+    <span class="toggle-icon">▼</span>
+	</div>
+	<div class="section-content">
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="check-col">✓</th>
+                    <th>ნივთის დასახელება</th>
+                    <th>რაოდენობა</th>
+                    <th>დამატებითი კომენტარი</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-id="add-g1-wipes">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>სველი ხელსახოცი</strong></td>
+                    <td>3 შეკვრა (დიდი ზომის)</td>
+                    <td>სასურველია ანტიბაქტერიული</td>
+                </tr>
+                <tr data-id="add-g1-bottle">
+                    <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                    <td class="item-title"><strong>წყლის ბოთლი</strong></td>
+                    <td>1 ცალი</td>
+                    <td>0,7 ლიტრის მოცულობის</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+	</div>
+
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:1000; justify-content:center; align-items:center; cursor:pointer;">
+    <img id="lightbox-img" style="max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</div>
+</body>
+</html>
