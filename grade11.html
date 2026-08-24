@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ათასწლეულის სკოლა | მე-11 კლასის რესურსები</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <a href="index.html">
+            <img src="logo.png" alt="ათასწლეულის სკოლა" class="logo-placeholder" onerror="this.style.display='none'">
+        </a>
+        <p class="subtitle">2026-2027 სასწავლო წლის მე-11 კლასის რესურსები</p>
+    </header>
+
+    <!-- STICKY PROGRESS BAR -->
+    <div class="progress-bar-container">
+        <span class="progress-text" id="progress-text">0 / 0 (0%)</span>
+        <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <button class="reset-btn" onclick="resetChecklist()">გასუფთავება</button>
+    </div>
+
+    <!-- SECTION 1: TEXTBOOKS AND SUBJECT SUPPLIES -->
+    <div class="section-title collapsible" onclick="toggleSection(this)">
+        I. სახელმძღვანელოები და საგნობრივი რესურსები
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-content">
+        <div class="table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="check-col">✓</th>
+                        <th>საგანი</th>
+                        <th>სახელმძღვანელოს შესახებ</th>
+                        <th>სხვა რესურსი</th>
+                        <th>დამატებითი კომენტარი</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-id="g11-georgian">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ქართული</strong></td>
+                        <td>ავტორები: მ. მენაბდე, ნ. ფურცელაძე, ნ. ლომიძე, ნ. სახეჩიძე<br>ქართული ენა და ლიტერატურა 11 კლასი<br>გამომცემლობა: სულაკაური</td>
+                        <td>ორი 48-ფურცლიანი რვეული; კალამი, ფანქარი</td>
+                        <td><img src="https://lh3.googleusercontent.com/chat_attachment/AOvVs2ED598W9m16P03iLThXqTj5-8LwI9QZvgk2Ew-l2mE6H2f7S8-4Z-90gK2x3" alt="ქართული 11" class="thumbnail" onclick="openLightbox(this.src)"><br>სასწავლო წლის განმავლობაში დამატებით გამოვიყენებთ მასწავლებლის მიერ შექმნილ რესურსებს</td>
+                    </tr>
+                    <tr data-id="g11-math">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>მათემატიკა</strong></td>
+                        <td>ავტორები: გურამ გოგიშვილი, თეიმურაზ ვეფხვაძე, ია მებონია, ლამარა ქურჩიშვილი.<br>მოსწავლის წიგნი (გამომცემლობა: ინტელექტი)<br>ღვაბერიძის სახელმძღვანელოები</td>
+                        <td>რვეული</td>
+                        <td>
+                            <img src="https://lh3.googleusercontent.com/chat_attachment/AOvVs2GZ0" alt="მათემატიკა 1" class="thumbnail" onclick="openLightbox(this.src)">
+                            <img src="https://lh3.googleusercontent.com/chat_attachment/AOvVs2GZ1" alt="მათემატიკა 2" class="thumbnail" onclick="openLightbox(this.src)">
+                            <img src="https://lh3.googleusercontent.com/chat_attachment/AOvVs2GZ2" alt="მათემატიკა 3" class="thumbnail" onclick="openLightbox(this.src)">
+                        </td>
+                    </tr>
+                    <tr data-id="g11-english">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ინგლისური</strong></td>
+                        <td>Clare Walsh & Lindsay Warwick<br>Gold Experience (2nd Edition) B2+ Pre-Advanced Student's Book;<br>Gold Experience (2nd Edition) B2+ Pre-Advanced Workbook</td>
+                        <td>რვეული საკლასო და საშინაო დავალებებისთვის</td>
+                        <td>📌 <strong>შენიშვნა:</strong> ინგლისური ენის სახელმძღვანელოები გაიყიდება სკოლის სივრცეში, სწავლის დაწყებიდან პირველი კვირის განმავლობაში. კომპლექტის ჯამური საფასური შეადგენს 116 ლარს (ახალი, ორიგინალი გამოცემა). გადახდა: საბანკო ბარათით ან ნაღდი ანგარიშსწორებით.</td>
+                    </tr>
+                    <tr data-id="g11-biology">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ბიოლოგია</strong></td>
+                        <td>ავტორი: ნანა ზაალიშვილი<br>გამომცემლობა: ტრიასი</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr data-id="g11-physics">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ფიზიკა</strong></td>
+                        <td>ავტორი: თინათინ ბუთხუზი<br>გამომცემლობა: საქართველოს მაცნე</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr data-id="g11-chemistry">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ქიმია</strong></td>
+                        <td>ავტორი: ბუთხუზი, ფაცაცია<br>გამომცემლობა: საქართველოს მაცნე</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr data-id="g11-geography">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>გეოგრაფია</strong></td>
+                        <td>ავტორები: მ. ბლიაძე, მ. სეხნიაშვილი (ორივე ნაწილი)<br>სულაკაურის გამომცემლობა</td>
+                        <td>რვეული</td>
+                        <td><img src="https://lh3.googleusercontent.com/chat_attachment/AOvVs2GZ3" alt="გეოგრაფია 11" class="thumbnail" onclick="openLightbox(this.src)"></td>
+                    </tr>
+                    <tr data-id="g11-history">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ისტორია</strong></td>
+                        <td>ავტორები: ნატო ახმეტელი, ბესიკ ლორთქიფანიძე, ნათია ფირცხალავა, თეა გოგოლიშვილი, ომიკო ეჯიბია, ნოდარ ჩხაიძე, აკაკი სადუნიშვილი, დავით ჩივაძე.<br>ისტორია 11 (I და II ნაწილები)<br>გამომცემლობა: დიოგენე</td>
+                        <td>საშინაო წერითი დავალებებისთვის ჩვეულებრივი რვეული ან ბლოკნოტი</td>
+                        <td><img src="https://lh3.googleusercontent.com/chat_attachment/AOvVs2GZ4" alt="ისტორია 11" class="thumbnail" onclick="openLightbox(this.src)"></td>
+                    </tr>
+                    <tr data-id="g11-geo-history">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>საქართველოს ისტორია</strong></td>
+                        <td>ავტორები: ნატო ახმეტელი, ბესიკ ლორთქიფანიძე, ნათია ფირცხალავა, თეა გოგოლიშვილი, ომიკო ეჯიბია, ნოდარ ჩხაიძე, აკაკი სადუნიშვილი, დავით ჩივაძე.<br>საქართველოს ისტორია მე-11 კლასი (I-II ნაწილი)<br>გამომცემლობა: დიოგენე</td>
+                        <td>საშინაო წერითი დავალებებისთვის ჩვეულებრივი რვეული ან ბლოკნოტი</td>
+                        <td><img src="https://lh3.googleusercontent.com/chat_attachment/AOvVs2GZ5" alt="საქართველოს ისტორია 11" class="thumbnail" onclick="openLightbox(this.src)"></td>
+                    </tr>
+                    <tr data-id="g11-german">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>გერმანული</strong></td>
+                        <td>Klasse! B1.1 (1-6 Lektionen)<br><small>ავტორი: Sarah Fleer</small></td>
+                        <td>რვეული საშინაო და საკლასო დავალებებისთვის</td>
+                        <td>აღნიშნული სახელმძღვანელოს წინასწარ შეძენა არ არის საჭირო - სწავლის დაწყების შემდეგ, მასწავლებელი თავად მიაწვდის მოსწავლეებს სასწავლო მასალისა და სახელმძღვანელოს ელექტრონულ ვერსიებს.</td>
+                    </tr>
+                    <tr data-id="g11-chinese">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ჩინური</strong></td>
+                        <td>HSK 3 Standard Coursebook & Workbook;<br>HSK 4 上 Standard Coursebook & Workbook<br><small>ავტორი: Jiang Liping</small></td>
+                        <td>რვეული საშინაო და საკლასო დავალებებისთვის; საქაღალდე პორტფოლიოსთვის</td>
+                        <td>აღნიშნული სახელმძღვანელოს წინასწარ შეძენა არ არის საჭირო - სწავლის დაწყების შემდეგ, მასწავლებელი თავად მიაწვდის მოსწავლეებს სასწავლო მასალისა და სახელმძღვანელოს ელექტრონულ ვერსიებს.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:1000; justify-content:center; align-items:center; cursor:pointer;">
+    <img id="lightbox-img" style="max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+</div>
+
+</body>
+</html>
