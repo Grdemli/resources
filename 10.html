@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ათასწლეულის სკოლა | ალტერნატიული პროგრამა</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <a href="index.html">
+            <img src="logo.png" alt="ათასწლეულის სკოლა" class="logo-placeholder" onerror="this.style.display='none'">
+        </a>
+        <p class="subtitle">2026-2027 სასწავლო წლის რესურსები — ალტერნატიული პროგრამა (X კლასი)</p>
+    </header>
+
+    <!-- STICKY PROGRESS BAR -->
+    <div class="progress-bar-container">
+        <span class="progress-text" id="progress-text">0 / 0 (0%)</span>
+        <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <button class="reset-btn" onclick="resetChecklist()">გასუფთავება</button>
+    </div>
+
+    <!-- SECTION 1: TEXTBOOKS AND SUBJECT SUPPLIES -->
+    <div class="section-title collapsible" onclick="toggleSection(this)">
+        I. სახელმძღვანელოები და საგნობრივი რესურსები
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-content">
+        <div class="table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="check-col">✓</th>
+                        <th>საგანი</th>
+                        <th>რესურსი</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-id="media-history">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ისტორია</strong></td>
+                        <td>
+                            ისტორია 10 მოსწავლის წიგნი (I და II ნაწილი) - სულაკაურის გამომცემლობა<br>
+                            <a href="https://sulakauri.ge/wignebi/istoria-10-mostsavlis-tsigni-natsili-1/" target="_blank" rel="noopener noreferrer">ნაწილი 1</a> | 
+                            <a href="https://sulakauri.ge/wignebi/istoria-10-mostsavlis-tsigni-natsili-2/" target="_blank" rel="noopener noreferrer">ნაწილი 2</a>
+                        </td>
+                    </tr>
+                    <tr data-id="media-biology">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ბიოლოგია</strong></td>
+                        <td>ბიოლოგია X - ნანა ზაალიშვილი (გამომცემლობა: ტრიასი)</td>
+                    </tr>
+                    <tr data-id="media-physics">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ფიზიკა</strong></td>
+                        <td>ფიზიკა X - მერაბ ტუღუში, თეიმურაზ შენგელია, თემურ შენგელია, ოთარ ღონღაძე</td>
+                    </tr>
+                    <tr data-id="media-chemistry">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ქიმია</strong></td>
+                        <td>თავად გაუზიარებს PDF-ს მასწავლებელი</td>
+                    </tr>
+                    <tr data-id="media-math">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>მათემატიკა</strong></td>
+                        <td>სკოლა უზრუნველყოფს მოსწავლეებისთვის მიწოდებას</td>
+                    </tr>
+                    <tr data-id="media-georgian">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>ქართული ენა</strong></td>
+                        <td>ქართული ენა და ლიტერატურა (ძველი ქართული მწერლობა - I ნაწილი X კლასი) — ვახტანგ როდონაია, მანანა გიგინეიშვილი, ლაურა გრიგოლაშვილი, ავთანდილ არაბული</td>
+                    </tr>
+                    <tr data-id="media-geography">
+                        <td class="check-col"><input type="checkbox" onchange="toggleItem(this)"></td>
+                        <td class="item-title"><strong>გეოგრაფია</strong></td>
+                        <td>თავად გაუზიარებს PDF-ს მასწავლებელი</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
